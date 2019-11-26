@@ -704,7 +704,7 @@ function! s:NewCatalogViewer(name, title)
 
     function! catalog_viewer.disable_editing_keymaps() dict
         """" Disabling of unused modification keys
-        for key in [".", "p", "P", "C", "x", "X", "r", "R", "i", "I", "a", "A", "D", "S", "U"]
+        for key in [".", "p", "P", "C", "x", "X", "r", "R", "I", "a", "A", "D", "S", "U"]
             try
                 execute "nnoremap <buffer> " . key . " <NOP>"
             catch //
@@ -1188,7 +1188,7 @@ function! s:NewBufferCatalogViewer()
             noremap <buffer> <silent> <LeftMouse> :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "")<CR>
             noremap <buffer> <silent> s           :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "vert sb")<CR>
             noremap <buffer> <silent> <C-v>       :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "vert sb")<CR>
-            noremap <buffer> <silent> i           :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "sb")<CR>
+            noremap <buffer> <silent> f           :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "sb")<CR>
             noremap <buffer> <silent> <C-s>       :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "sb")<CR>
             noremap <buffer> <silent> t           :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "tab sb")<CR>
             noremap <buffer> <silent> <C-t>       :<C-U>call b:buffergator_catalog_viewer.visit_target(!g:buffergator_autodismiss_on_select, 0, "tab sb")<CR>
@@ -1224,7 +1224,7 @@ function! s:NewBufferCatalogViewer()
 
             """" Catalog management
             noremap <buffer> <silent> s           :call b:buffergator_catalog_viewer.cycle_sort_regime()<CR>
-            noremap <buffer> <silent> i           :call b:buffergator_catalog_viewer.cycle_display_regime()<CR>
+            noremap <buffer> <silent> f           :call b:buffergator_catalog_viewer.cycle_display_regime()<CR>
             noremap <buffer> <silent> u           :call b:buffergator_catalog_viewer.rebuild_catalog()<CR>
             noremap <buffer> <silent> q           :call b:buffergator_catalog_viewer.close(1)<CR>
             noremap <buffer> <silent> d           :call b:buffergator_catalog_viewer.delete_target(0, 0)<CR>
